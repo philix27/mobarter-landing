@@ -32,22 +32,57 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
-      colors: {
-        current: "currentColor",
-        transparent: "transparent",
-        white: "#FFFFFF",
-        black: "#121723",
-        dark: "#1D2430",
-        primary: "#4A6CF7",
-        yellow: "#FBB040",
-        "body-color": "#788293",
-        "body-color-dark": "#959CB1",
-        "gray-dark": "#1E232E",
-        "gray-light": "#F0F2F9",
-        stroke: "#E3E8EF",
-        "stroke-dark": "#353943",
-        "bg-color-dark": "#171C28",
-      },
+      // colors: {
+      //   current: "currentColor",
+      //   transparent: "transparent",
+      //   white: "#FFFFFF",
+      //   black: "#121723",
+      //   dark: "#1D2430",
+      //   primary: "#4A6CF7",
+      //   yellow: "#FBB040",
+      //   "body-color": "#788293",
+      //   "body-color-dark": "#959CB1",
+      //   "gray-dark": "#1E232E",
+      //   "gray-light": "#F0F2F9",
+      //   stroke: "#E3E8EF",
+      //   "stroke-dark": "#353943",
+      //   "bg-color-dark": "#171C28",
+      // },
+      	colors: {
+				border: 'var(--border)',
+				input: 'var(--input)',
+				ring: 'var(--ring)',
+				background: 'var(--background)',
+				foreground: 'var(--foreground)',
+				primary: {
+					DEFAULT: 'var(--primary)',
+					foreground: 'var(--primary-foreground)'
+				},
+				secondary: {
+					DEFAULT: 'var(--secondary)',
+					foreground: 'var(--secondary-foreground)'
+				},
+				destructive: {
+					DEFAULT: 'hsl(var(--destructive))',
+					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				muted: {
+					DEFAULT: 'var(--muted)',
+					foreground: 'var(--muted-foreground)'
+				},
+				accent: {
+					DEFAULT: 'var(--accent)',
+					foreground: 'var(--accent-foreground)'
+				},
+				popover: {
+					DEFAULT: 'hsl(var(--popover))',
+					foreground: 'hsl(var(--popover-foreground))'
+				},
+				card: {
+					DEFAULT: 'var(--card)',
+					foreground: 'var(--card-foreground)'
+				}
+			},
 
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
