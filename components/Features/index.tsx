@@ -1,6 +1,6 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
-import featuresData from "./featuresData";
+import {featuresData} from "./featuresData";
 
 const Features = () => {
   return (
@@ -8,7 +8,7 @@ const Features = () => {
       <section id="features" className="py-6 md:py-20 lg:py-20">
         <div className="container">
           <SectionTitle
-            title="Main Features"
+            title="Features"
             paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
             center
           />
