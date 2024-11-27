@@ -19,8 +19,8 @@ export default function Hero() {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Empower users to 
-                  <span className="text-primary " >buy & sell crypto</span> inside
+                  Empower users to
+                  <span className="text-primary"> buy & sell crypto</span> inside
                   your app
                 </h1>
                 <p className="dark:text-body-color-dark text-body-color mb-12 text-base !leading-relaxed text-muted sm:text-lg md:text-xl">
@@ -34,35 +34,37 @@ export default function Hero() {
                     title="Buy & Sell Crypto"
                     href="https://mobarter.vercel.app/"
                   />
-                  <LinkButton title="Buy airtime" mode="secondary" />
+                  {/* <LinkButton title="Buy airtime" mode="secondary" /> */}
                 </div>
               </div>
               <div
-                className="wow fadeInUp relative mx-auto mt-5 w-[90%] text-center md:mt-0 md:w-[40%]"
+                className="wow fadeInUp mx-auto mt-8 flex h-[400px] w-[90%] items-center justify-center text-center md:mt-0 md:w-[40%]"
                 data-wow-delay=".2s"
               >
-                <Image
-                  src={
-                    theme === "dark"
-                      ? "/images/hero/darkDesk.png"
-                      : "/images/hero/lightDesk.png"
-                  }
-                  alt="logo"
-                  width={200}
-                  height={250}
-                  className="md: hidden h-full w-full md:block"
-                />
-                <Image
-                  src={
-                    theme === "dark"
-                      ? "/images/hero/phoneDark.png"
-                      : "/images/hero/phoneLight.png"
-                  }
-                  alt="logo"
-                  width={170}
-                  height={200}
-                  className="absolute bottom-[10px] left-[0px] h-fit w-fit"
-                />
+                <div className="relative flex h-full w-full items-center justify-center">
+                  {/* <Image
+                    src={
+                      theme === "dark"
+                        ? "/images/hero/darkDesk.png"
+                        : "/images/hero/lightDesk.png"
+                    }
+                    alt="logo"
+                    width={200}
+                    height={250}
+                    className="md: hidden h-full w-full md:block"
+                  /> */}
+                  <Image
+                    src={
+                      theme === "dark"
+                        ? "/images/hero/phoneDark.png"
+                        : "/images/hero/phoneLight.png"
+                    }
+                    alt="logo"
+                    width={200}
+                    height={250}
+                    className="bottom-[10px] left-[0px] h-[100%] w-fit"
+                  />
+                </div>
               </div>
             </div>
           </div>

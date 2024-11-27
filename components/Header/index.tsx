@@ -7,6 +7,8 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import LinkButton from "../Common/LinkButton";
 import { useTheme } from "next-themes";
+import { IoMenuOutline } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
   // Navbar toggle
@@ -45,7 +47,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex h-[70px] w-full items-center ${
           sticky
-            ? "dark:bg-gray-dark fixed z-[9999] bg-card !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:shadow-sticky-dark"
+            ? "dark:bg-gray-dark fixed z-[9999] bg-background !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:shadow-sticky-dark"
             : "absolute bg-transparent"
         }`}
       >
@@ -92,29 +94,19 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] lg:hidden"
                 >
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-card ${
-                      navbarOpen ? "top-[7px] rotate-45" : " "
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-card ${
-                      navbarOpen ? "opacity-0" : " "
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-card ${
-                      navbarOpen ? "top-[-8px] -rotate-45" : " "
-                    }`}
-                  />
+                  {navbarOpen ? (
+                    <IoCloseSharp className="text-xl" />
+                  ) : (
+                    <IoMenuOutline className="text-xl" />
+                  )}
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-card px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark l g:w-auto absolute right-0 z-30 mt-0 w-full rounded bg-background px-6 py-4 duration-300 lg:visible lg:static lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
-                      ? "visibility top-full opacity-100"
+                      ? "visibility top-[80px] opacity-100"
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
@@ -136,7 +128,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="text-dark flex cursor-pointer items-center justify-between py-2 text-base group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className={`text-dark flex cursor-pointer items-center justify-between py-2 text-base group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -173,8 +165,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <LinkButton title="Join" mode="primary" />
-
+                {/* <LinkButton title="Join" mode="primary" /> */}
                 <ThemeToggler />
               </div>
             </div>
