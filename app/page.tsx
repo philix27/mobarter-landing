@@ -12,8 +12,8 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Mobarter and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "Mobarter, a p2p trading platform.",
+  description: "Swift exchange and unlock the potentials of your cypto coins",
   // other metadata
 };
 

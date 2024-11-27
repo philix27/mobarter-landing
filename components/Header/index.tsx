@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import LinkButton from "../Common/LinkButton";
 
 const Header = () => {
   // Navbar toggle
@@ -41,7 +42,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center h-[70px] ${
+        className={`header left-0 top-0 z-40 flex h-[70px] w-full items-center ${
           sticky
             ? "dark:bg-gray-dark fixed z-[9999] bg-card !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:shadow-sticky-dark"
             : "absolute bg-transparent"
@@ -49,7 +50,7 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className=" max-w-full px-4 xl:mr-12">
+            <div className="max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -61,7 +62,7 @@ const Header = () => {
                   alt="logo"
                   width={140}
                   height={40}
-                  className="hidden w-full md:block size-[20px]"
+                  className="hidden size-[20px] w-full md:block"
                 />
                 {/* <Image
                   src="/images/logo/logo2.svg"
@@ -166,23 +167,9 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  target="_blank"
-                  href="https://mobarter-app.vercel.app/sign-in"
-                  className="text-dark hidden px-7 py-3 text-base font-medium hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  target="_blank"
-                  href="https://mobarter-app.vercel.app/sign-up"
-                  className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
+                <LinkButton title="Join" mode="primary" />
+
+                <ThemeToggler />
               </div>
             </div>
           </div>
