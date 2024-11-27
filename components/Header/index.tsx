@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 import LinkButton from "../Common/LinkButton";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   // Navbar toggle
@@ -38,7 +39,7 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
-
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <header
@@ -58,12 +59,17 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logoName.svg"
+                  src={
+                    theme === "dark"
+                      ? "/images/logo/logoDark.svg"
+                      : "/images/logo/logoName.svg"
+                  }
                   alt="logo"
                   width={140}
                   height={40}
                   className="hidden size-[20px] w-full md:block"
                 />
+
                 {/* <Image
                   src="/images/logo/logo2.svg"
                   alt="logo"

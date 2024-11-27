@@ -1,8 +1,10 @@
-import Link from "next/link";
+"use client";
 import LinkButton from "../Common/LinkButton";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
-const Hero = () => {
+export default function Hero() {
+  const { theme, setTheme } = useTheme();
   return (
     <>
       <section
@@ -13,34 +15,53 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full flex-col gap-y-4 px-4 md:flex md:flex-row md:gap-x-5">
               <div
-                className="wow fadeInUp mx-auto mt-5 w-[90%]  md:mt-0 md:w-[50%] md:max-w-[50%]"
+                className="wow fadeInUp mx-auto mt-5 w-[90%] md:mt-0 md:w-[50%] md:max-w-[50%]"
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Empower users to{" "}
+                  Empower users to
                   <span className="text-primary">buy & sell crypto</span> inside
                   your app
                 </h1>
-                <p className="dark:text-body-color-dark text-body-color mb-12 text-muted text-base !leading-relaxed sm:text-lg md:text-xl">
+                <p className="dark:text-body-color-dark text-body-color mb-12 text-base !leading-relaxed text-muted sm:text-lg md:text-xl">
                   Give millions of users worldwide a direct connection between
                   crypto and fiat, and boost your revenue with one simple, free
                   integration.
                 </p>
                 <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <LinkButton title="Buy & Sell Crypto" />
+                  <LinkButton
+                    isBlank
+                    title="Buy & Sell Crypto"
+                    href="https://mobarter.vercel.app/"
+                  />
                   <LinkButton title="Buy airtime" mode="secondary" />
                 </div>
               </div>
               <div
-                className="wow fadeInUp mx-auto mt-5 w-[90%] text-center md:mt-0 md:w-[40%]"
+                className="wow fadeInUp relative mx-auto mt-5 w-[90%] text-center md:mt-0 md:w-[40%]"
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/hero/borrow.png"
+                  src={
+                    theme === "dark"
+                      ? "/images/hero/darkDesk.png"
+                      : "/images/hero/lightDesk.png"
+                  }
                   alt="logo"
-                  width={140}
-                  height={150}
-                  className="w-full"
+                  width={200}
+                  height={250}
+                  className="md: hidden h-full w-full md:block"
+                />
+                <Image
+                  src={
+                    theme === "dark"
+                      ? "/images/hero/phoneDark.png"
+                      : "/images/hero/phoneLight.png"
+                  }
+                  alt="logo"
+                  width={170}
+                  height={200}
+                  className="absolute bottom-[10px] left-[0px] h-fit w-fit"
                 />
               </div>
             </div>
@@ -49,6 +70,4 @@ const Hero = () => {
       </section>
     </>
   );
-};
-
-export default Hero;
+}
