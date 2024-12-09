@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Svg from "./Svg";
 import { FaInstagramSquare } from "react-icons/fa";
-import { AiOutlineFacebook } from "react-icons/ai";
-
 
 export default function Footer() {
   return (
