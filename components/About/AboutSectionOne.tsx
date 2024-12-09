@@ -1,5 +1,12 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { IconType } from "react-icons";
+import { LuUtilityPole } from "react-icons/lu";
+import { TbSchool } from "react-icons/tb";
+import { GiWaterSplash } from "react-icons/gi";
+import { FaRegLightbulb } from "react-icons/fa";
+import { IoCallOutline } from "react-icons/io5";
+import { MdSignalWifiStatusbarConnectedNoInternet1 } from "react-icons/md";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,10 +15,10 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+  const List = ({ text, Icon }: { text: string; Icon: IconType }) => (
+    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
+        <Icon className="text-white" />
       </span>
       {text}
     </p>
@@ -35,15 +42,18 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Airtime" />
-                    <List text="Data" />
-                    <List text="Utility bills" />
+                    <List text="Airtime" Icon={IoCallOutline} />
+                    <List
+                      text="Data"
+                      Icon={MdSignalWifiStatusbarConnectedNoInternet1}
+                    />
+                    <List text="Utility bills" Icon={LuUtilityPole} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Light bills" />
-                    <List text="Water bill" />
-                    <List text="School fees" />
+                    <List text="Light bills" Icon={FaRegLightbulb} />
+                    <List text="Water bill" Icon={GiWaterSplash} />
+                    <List text="School fees" Icon={TbSchool} />
                   </div>
                 </div>
               </div>

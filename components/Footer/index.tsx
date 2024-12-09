@@ -15,15 +15,14 @@ export default function Footer() {
       >
         <div className="mb-8 h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
         <div className="container">
-          <div className="-mx-4 grid md:grid-cols-4 grid-cols-2">
-
+          <div className="-mx-4 grid grid-cols-2 md:grid-cols-4">
             <div className="w-full px-4">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
                     src="/images/logo/logo.svg"
                     alt="logo"
-                    className="size-[70px] w-full"
+                    className="size-[40px] w-full md:size-[50px]"
                     width={140}
                     height={30}
                   />
@@ -89,7 +88,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="w-full px-4 ">
+            <div className="w-full px-4">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
                   Useful Links
@@ -115,7 +114,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="w-full px-4 ">
+            <div className="w-full px-4">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
                   Terms
@@ -141,7 +140,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="w-full px-4 ">
+            <div className="w-full px-4">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-6 text-xl font-bold text-black dark:text-white">
                   Support & Help
