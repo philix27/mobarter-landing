@@ -24,7 +24,8 @@ export default function Hero() {
                   at reliable prices
                 </h1>
                 <p className="dark:text-body-color-dark text-body-color mb-12 text-base !leading-relaxed text-muted sm:text-lg md:text-xl">
-                  Join thousands of users in a peer-to-peer marketplace.
+                  Join other users across the globe in a peer-to-peer
+                  marketplace.
                 </p>
                 <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <LinkButton
@@ -40,6 +41,10 @@ export default function Hero() {
                 data-wow-delay=".2s"
               >
                 <div className="relative flex h-full w-full items-center justify-center">
+                  {/* <iframe
+                    src="https://mobarter.vercel.app/swap"
+                    className="md:w-[80%] w-full rounded-lg h-full"
+                  ></iframe> */}
                   <Image
                     src={
                       theme === "dark"
@@ -51,6 +56,11 @@ export default function Hero() {
                     height={250}
                     className="bottom-[10px] left-[0px] h-[100%] w-fit"
                   />
+                  {/* <img
+                    src={theme === "dark" ? "/globe.png" : "/globe.png"}
+                    alt="logo"
+                    className="h-[360px] w-[400px] filter md:h-[360px] md:w-[350px]"
+                  /> */}
                 </div>
               </div>
             </div>

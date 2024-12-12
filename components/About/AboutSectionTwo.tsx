@@ -9,16 +9,20 @@ export default function AboutSectionTwo() {
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
             <div
-              className="wow fadeInUp relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0"
+              className="wow fadeInUp my-auto mx-auto mb-12 max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
-              <Image
+              <img
+                src={"/globe.png"}
+                alt="logo"
+                className="h-[360px] w-[400px] drop-shadow-three filter dark:drop-shadow-none md:h-[360px] md:w-[350px]"
+              />
+              {/* <Image
                 src="/images/exchange.jpg"
                 alt="about image"
                 fill
                 className="drop-shadow-three dark:drop-shadow-none"
-              />
-             
+              /> */}
             </div>
           </div>
           <div className="w-full px-4 lg:w-1/2">
@@ -33,14 +37,15 @@ export default function AboutSectionTwo() {
               <div className="mb-9">
                 <Subheading> Fair Rates</Subheading>
                 <Paragraph>
-                 Select from the pool of vendors who has a fair price offering.
+                  Select from the pool of vendors who has a fair price offering.
                 </Paragraph>
               </div>
               <div className="mb-1">
                 <Subheading>Quick and Trust worthy</Subheading>
                 <Paragraph>
-                  KYC verification must be done before participating in an exchange, 
-                  to make the platform a reliable place resistance to money laundering.
+                  KYC verification must be done before participating in an
+                  exchange, to make the platform a reliable place resistance to
+                  money laundering.
                 </Paragraph>
               </div>
             </div>
