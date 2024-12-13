@@ -31,7 +31,7 @@ export default function Hero() {
                   <LinkButton
                     isBlank
                     title="Buy & Sell Crypto"
-                    href="https://mobarter.vercel.app/"
+                    href="https://app.mobarter.com"
                   />
                   {/* <LinkButton title="Buy airtime" mode="secondary" /> */}
                 </div>
