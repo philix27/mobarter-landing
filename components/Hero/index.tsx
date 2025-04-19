@@ -31,8 +31,8 @@ export default function Hero() {
                 <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <LinkButton
                     isBlank
-                    title="Buy & Sell Crypto"
-                    href="https://app.mobarter.com"
+                    title="Get started"
+                    href="https://t.me/mobarter_bot/app"
                   />
                   {/* <LinkButton title="Buy airtime" mode="secondary" /> */}
                 </div>
@@ -47,13 +47,11 @@ export default function Hero() {
                     className="md:w-[80%] w-full rounded-lg h-full"
                   ></iframe> */}
                   <Image
-                    src={
-                      "/a1.png"
-                    }
+                    src={"/a1.png"}
                     alt="logo"
                     width={200}
                     height={250}
-                    className="bottom-[10px] left-[0px]  h-[100%] md:h-[120%] w-fit"
+                    className="bottom-[10px] left-[0px] h-[100%] w-fit md:h-[120%]"
                   />
                   {/* <img
                     src={theme === "dark" ? "/globe.png" : "/globe.png"}
