@@ -50,7 +50,7 @@ const AboutSectionOne = () => {
                     <List text="Utility bills" Icon={LuUtilityPole} />
                   </div>
 
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2 ">
                     <List text="Light bills" Icon={FaRegLightbulb} />
                     <List text="Water bill" Icon={GiWaterSplash} />
                     <List text="School fees" Icon={TbSchool} />
@@ -65,7 +65,7 @@ const AboutSectionOne = () => {
                 data-wow-delay=".2s"
               >
                 <Image
-                  src="/images/exchange.jpg"
+                  src="/1.jpeg"
                   alt="about image"
                   fill
                   className="drop-shadow-three dark:drop-shadow-none"
