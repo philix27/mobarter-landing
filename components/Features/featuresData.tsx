@@ -9,20 +9,29 @@ export const featuresData: Feature[] = [
     icon: <FaExchangeAlt className="size-[20px] text-white" />,
     title: "P2P Exchange",
     paragraph:
-      "Exchange cryptocureencies at a fair exchange rate provided by the market.",
+      "Trade cryptocurrencies directly with other users at fair, real-time rates—no middlemen or hidden fees. Our P2P system ensures secure, transparent, and flexible transactions, giving you full control.",
   },
   {
     id: 1,
     icon: <IoSpeedometerOutline className="size-[24px] text-white" />,
-    title: "Quick and Reliable",
+    title: "Fast and Secure Transactions",
     paragraph:
-      "We ensure all participants of the p2p exchange have undergone kyc verification to minimize fraud.",
+      "At Morbarter, your safety is our priority. All P2P exchange participants undergo KYC verification to ensure a secure and trusted trading environment with verified users.",
   },
 
   {
     id: 1,
     icon: <LiaMoneyBillSolid className="size-[25px] text-white" />,
-    title: "Pay Bills",
-    paragraph: "Use crypto currencies to pay bills and purchase utilities.",
+    title: "Pay Bills with Cryptocurrencies",
+    paragraph: "Use cryptocurrencies to quickly and securely pay bills and purchase utilities like electricity, water, and internet. Enjoy a faster, digital alternative to traditional payment methods."
+
+
+
+
+
+
+
+
+
   },
 ];
